@@ -12,7 +12,7 @@ def intro():
   print(f"Pressing enter has a {colors.green}5%{colors.reset} chance to increase your {colors.bold}PPE{colors.reset} or your {colors.bold}PPS{colors.reset} by 1!")
   time.sleep(0.5)
   # too many colors. !!!
-  print(f"{colors.bg_dark_red}But...{colors.reset} Pressing enter has a {colors.dark_red}1%{colors.reset} chance to decrease your {colors.bold}PPE{colors.reset} or your {colors.bold}PPS{colors.reset} by 1!\nAnd even if you have {colors.dark_red}0{colors.reset} or {colors.dark_red}-1{colors.reset} {colors.bold}PPE or PPS{colors.reset} just keep pressing enter to get more {colors.bold}PPE or PPS{colors.reset}")
+  print(f"{colors.bg_dark_red}But...{colors.reset} Pressing enter has a {colors.dark_red}1%{colors.reset} chance to decrease your {colors.bold}PPE{colors.reset} or your {colors.bold}PPS{colors.reset} by 1! {colors.bg_green}But{colors.reset} only when your {colors.bold}PPE or PPS{colors.reset} is greater than 1")
   time.sleep(0.5)
   print(f"And also even tho the {colors.bg_green}run button{colors.reset} is green and doesn't say {colors.bg_gray}stop{colors.reset}, it will still be running")
   time.sleep(0.5)

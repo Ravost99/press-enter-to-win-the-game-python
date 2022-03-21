@@ -1,5 +1,6 @@
 from colors import colorMsg, rainBow, allBGCodes, allColorCodes
 from clear import clear
+from update import update
 from _def import intro, help
 import colors, time, random, os, sys, math, json
 
@@ -8,9 +9,12 @@ ARROW = " "
 score = 0
 ppe = 1
 pps = 0
+#randomization seed
+seed = random.randint(10000, 99999)
 
 clear()
 intro()
+#update()
 while True:
   enter = input(ARROW)
 
@@ -22,10 +26,10 @@ while True:
     elif num == 50:
       pps += 1
       print(f"{colors.bg_yellow}{colors.black}Congratulations!{colors.reset}\nYour {colors.bold}PPS{colors.reset} has increased by 1!{colors.reset}")
-    elif num == 69:
+    elif num == 69 and pps > 1 or ppe > 1:
       pps -= 1
       print(f"{colors.bg_dark_red}{colors.black}Uh Oh!{colors.reset}\nYour {colors.bold}PPS{colors.reset} has decreased by 1!{colors.reset}")
-    elif num == 13:
+    elif num == 13 and pps > 1 or ppe > 1:
       ppe -= 1
       print(f"{colors.bg_dark_red}{colors.black}Uh Oh!{colors.reset}\nYour {colors.bold}PPE{colors.reset} has decreased by 1!{colors.reset}")
     score += ppe
@@ -79,7 +83,6 @@ while True:
       intro()
     else:
       continue
-    
   #developer testing
   elif enter.startswith("ppe"):
     test = int(enter.split("ppe",1)[1])
